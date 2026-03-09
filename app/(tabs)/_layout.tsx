@@ -6,12 +6,12 @@ export default function TabsLayout() {
     <Tabs screenOptions={{
         tabBarActiveTintColor: '#ffd33d',
         headerStyle: {
-        backgroundColor: '#25292e',
+          backgroundColor: '#25292e',
         },
         headerShadowVisible: false,
         headerTintColor: '#fff',
         tabBarStyle: {
-        backgroundColor: '#25292e',
+          backgroundColor: '#25292e',
         },
     }}>
       <Tabs.Screen name="index" options={{ title: 'Trips overview', tabBarIcon: ({ color, focused }) => (
