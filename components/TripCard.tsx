@@ -1,4 +1,4 @@
-import { Trip } from "@/app/(tabs)";
+import { Trip } from "./Trips";
 import React from "react";
 import { ImageBackground, Pressable, StyleSheet, Text, View } from "react-native";
 
