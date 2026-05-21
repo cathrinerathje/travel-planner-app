@@ -106,13 +106,7 @@ export default function Trips() {
                     refreshing={refreshing}
                     onRefresh={handleRefresh}
                     renderItem={({ item: trip }) => (
-                        <TripCard
-                            image={trip.image}
-                            destination={trip.destination}
-                            startDate={trip.startDate}
-                            endDate={trip.endDate}
-                            onPress={() => alert('Trip pressed:' + trip.destination)}
-                        />
+                        <TripCard { ...trip} />
                     )}
                 />
             )}

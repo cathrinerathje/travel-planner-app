@@ -1,14 +1,21 @@
 import { Trip } from "./Trips";
 import React from "react";
 import { ImageBackground, Pressable, StyleSheet, Text, View } from "react-native";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
+import {RootStackParams} from "@/app/(tabs)/index/_layout";
+import {useNavigation} from "expo-router";
 
-type TripCardProps = Pick<Trip, "image" | "destination" | "startDate" | "endDate"> & { 
-    onPress: () => void; 
-}
+export type NavigationProp = NativeStackNavigationProp<RootStackParams, 'TripDetails'>;
 
-export default function TripCard({ image, destination, startDate, endDate, onPress }: TripCardProps) {
+export default function TripCard({ id, image, destination, startDate, endDate }: Trip) {
+  const navigation = useNavigation<NavigationProp>();
+
+  const handlePress = () => {
+    navigation.navigate('TripDetails', { id });
+  }
+
   return (
-    <Pressable onPress={onPress} style={styles.card}>
+    <Pressable onPress={handlePress} style={styles.card}>
       <ImageBackground
         source={{ uri: image }}
         style={styles.image}
