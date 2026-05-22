@@ -1,4 +1,4 @@
-import { Trip } from "./Trips";
+import { Trip } from "@/context/TripsContext";
 import React from "react";
 import { ImageBackground, Pressable, StyleSheet, Text, View } from "react-native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
